@@ -1,0 +1,24 @@
+class Solution {
+    public List<List<Integer>> combine(int n, int k) {
+   //declaring new list of list for storing results
+        List<List<Integer>> res = new ArrayList<>();
+		//calling the helper function
+        helper(n, k, 1,  res, new ArrayList<>());
+        return res;
+    }
+    private void helper(int n, int k, int idex, List<List<Integer>> res, List<Integer> temp){
+	//when size of the temp list equals to k it is added to the final list 'res'
+        if(temp.size()==k){
+            res.add(new ArrayList<>(temp));
+			//after adding the temp to res just return 
+            return;
+        }
+		//for loop for iterating over the range [1,n]
+        for(int i = idex; i<=n;i++){
+            temp.add(i);
+            helper(n, k, i+1, res, temp);
+			//backtracking to the previous numeber
+            temp.remove(temp.size()-1);
+        }
+    }
+}
