@@ -1,0 +1,44 @@
+class BrowserHistory {
+
+  LinkedList<String> list = new LinkedList<>();
+    int index = 0;
+    public BrowserHistory(String homepage) {
+        list.add(homepage);
+    }
+    
+    public void visit(String url) {
+        index++;
+        list.add(index, url);
+        while(index < list.size()-1){
+            list.removeLast();
+        }
+        return;
+    }
+    
+    public String back(int steps) {
+        if(index-steps < 0){
+            index = 0;
+            return list.getFirst();
+        } 
+        index -=steps;
+        return list.get(index);
+    }
+    
+    public String forward(int steps) {
+        if(index+steps >= list.size()){
+            index = list.size()-1;
+            
+            return list.getLast();
+        } 
+        index+= steps;
+        return list.get(index);
+}
+}
+
+/**
+ * Your BrowserHistory object will be instantiated and called as such:
+ * BrowserHistory obj = new BrowserHistory(homepage);
+ * obj.visit(url);
+ * String param_2 = obj.back(steps);
+ * String param_3 = obj.forward(steps);
+ */
