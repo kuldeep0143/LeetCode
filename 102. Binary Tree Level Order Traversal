@@ -20,6 +20,5 @@ class Solution {
             }
             res.add(temp);
         }
-        return res;
-    }
+        return res;}
 }
