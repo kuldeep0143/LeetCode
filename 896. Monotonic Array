@@ -1,0 +1,21 @@
+class Solution {
+    public boolean isMonotonic(int[] nums) {
+        boolean increasing = true;  // Initialize as true for non-decreasing order
+        boolean decreasing = true;  // Initialize as true for non-increasing order
+        
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > nums[i - 1]) {
+                decreasing = false;  // If we find an increasing element, it's not decreasing
+            } else if (nums[i] < nums[i - 1]) {
+                increasing = false;  // If we find a decreasing element, it's not increasing
+            }
+            
+            // If both increasing and decreasing become false, the array is not monotonic
+            if (!increasing && !decreasing) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+}
