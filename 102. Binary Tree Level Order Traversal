@@ -17,7 +17,8 @@ class Solution {
                 if(node.right!=null)
                     list.add(node.right);
                 i++;
-            }
+
+}
             res.add(temp);
         }
         return res;}
