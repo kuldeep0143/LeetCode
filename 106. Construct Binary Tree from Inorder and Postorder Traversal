@@ -23,7 +23,8 @@ class Solution {
         
         return helper(map, postorder, 0, inorder.length - 1, 0, postorder.length - 1);
         
-    }
+
+}
     
     private TreeNode helper(Map<Integer, Integer> map, int[] postorder, int inLeft, int inRight, int poLeft, int poRight) {
         if (inLeft > inRight) {
