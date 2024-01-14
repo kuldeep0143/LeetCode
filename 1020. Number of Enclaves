@@ -22,5 +22,6 @@ class Solution {
                 dfs(grid, x, y);
             }
         }
-    }
+
+}
 }
