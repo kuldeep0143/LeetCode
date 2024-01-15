@@ -13,5 +13,7 @@ class Solution {
             } else {
                 return gcd(y, x % y);
             }    
-    }
+
+}
+
 }
