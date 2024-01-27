@@ -19,7 +19,8 @@ class Solution {
         for (int i = 0; i < inorder.length; i++) {
                 map.put(inorder[i], i);
            
-        }
+
+}
         
         return helper(map, postorder, 0, inorder.length - 1, 0, postorder.length - 1);
         
