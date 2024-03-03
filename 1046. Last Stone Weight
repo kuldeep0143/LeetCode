@@ -11,5 +11,6 @@ class Solution {
             maxHeap.offer(Math.abs(stone1 - stone2));
         }
         return maxHeap.poll();
+
     }
 }
