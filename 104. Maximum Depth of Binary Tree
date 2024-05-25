@@ -6,6 +6,4 @@ class Solution {
         return Math.max(right,left) +1;
         
     }
-
-
 }
